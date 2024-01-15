@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:03:51 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/12 13:08:50 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/15 14:47:34 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,11 @@ class Animal
 	public:
 		Animal();
 		Animal(const Animal& copy);
-		~Animal();
+		virtual ~Animal();
 		Animal& operator=(const Animal& copy);
+
+		virtual std::string getType() const;
+		virtual void makeSound() const;
 	
 	protected:
 		std::string _type;	

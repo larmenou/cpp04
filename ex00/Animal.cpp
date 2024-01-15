@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:03:54 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/12 13:12:39 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/15 14:47:16 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,5 +32,15 @@ Animal& Animal::operator=(const Animal& copy)
 
 Animal::~Animal()
 {
-	std::cout << "Destructor Animal called." << std::endl;
+	std::cout << "Animal destructor called." << std::endl;
+}
+
+std::string Animal::getType() const
+{
+	return (_type);
+}
+
+void Animal::makeSound() const
+{
+	std::cout << "Insert some animal noise here" << std::endl;
 }

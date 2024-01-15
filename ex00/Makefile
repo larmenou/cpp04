@@ -7,7 +7,9 @@ NAME		:= Animal
 SRCS_F		:= 	main \
 				Animal \
 				Cat \
-				Dog
+				Dog \
+				WrongAnimal \
+				WrongCat
 
 SRCS		:= $(addsuffix .cpp, $(SRCS_F))
 OBJ			:= $(addsuffix .o, $(SRCS_F))

@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:14:30 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/12 13:18:11 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/15 15:40:33 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ class Cat : public Animal
 	public:
 		Cat();
 		Cat(const Cat& copy);
-		~Cat();
+		virtual ~Cat();
 		Cat& operator=(const Cat& copy);
-	
-	protected:
-		std::string _type;	
+
+		virtual std::string getType() const;
+		virtual void makeSound() const;
 };
 
 #endif
