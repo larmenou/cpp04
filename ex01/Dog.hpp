@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:14:35 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/15 15:42:12 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/16 14:55:48 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class Dog : public Animal
 
 		virtual std::string getType() const;
 		virtual void makeSound() const;
+		
+		Brain* getBrain();
 	
 	private:
 		Brain* _brain;

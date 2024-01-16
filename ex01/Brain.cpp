@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/15 15:14:59 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/15 15:37:03 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/16 12:40:06 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,14 @@ Brain& Brain::operator=(Brain& copy)
 Brain::~Brain()
 {
 	std::cout << "Brain destructor called" << std::endl;	
+}
+
+void Brain::setIdea(unsigned int index, std::string idea)
+{
+	this->_ideas[index] = idea;
+}
+
+std::string Brain::getIdea(unsigned int index) const
+{
+	return (this->_ideas[index]);
 }

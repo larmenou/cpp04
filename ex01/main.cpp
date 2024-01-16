@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:02:00 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/15 15:56:51 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/16 14:20:39 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,22 @@ int main()
 	{
 		std::cout << std::endl;
 		
-		Animal* meta = new Animal[10];
+		Animal* meta[10];
 		
 		for (int i = 0; i < 5; i++)
-			meta[i] = Dog();
+			meta[i] = new Dog();
 		for(int i = 5; i < 10; i++)
-			meta[i] = Cat();
+			meta[i] = new Cat();
+		
+		std::cout << std::endl;
+
+		for(int i = 0; i < 10; i++)
+			meta[i]->makeSound();
 		
 		std::cout << std::endl;
 		
-		delete[] meta;
+		for(int i = 0; i < 10; i++)
+			delete meta[i];
 	}
 	return (0);
 }

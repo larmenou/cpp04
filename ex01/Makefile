@@ -8,6 +8,8 @@ SRCS_F		:= 	main \
 				Animal \
 				Cat \
 				Dog \
+				WrongAnimal \
+				WrongCat \
 				Brain
 
 SRCS		:= $(addsuffix .cpp, $(SRCS_F))
