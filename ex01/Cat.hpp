@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:14:30 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/15 15:42:15 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/17 14:12:27 by baloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ class Cat : public Animal
 
 		virtual std::string getType() const;
 		virtual void makeSound() const;
+
+		Brain* getBrain() const;
 	
 	private:
 		Brain* _brain;

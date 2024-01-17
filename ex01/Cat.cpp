@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:14:28 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/15 15:43:08 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/17 14:13:14 by baloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,19 @@ Cat::Cat()
 
 Cat::Cat(const Cat& copy)
 {
-	_type = copy._type;
+	this->_type = copy._type;
+	this->_brain = new Brain(*(copy._brain));
 	std::cout << "Copy Cat constructor called." << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& copy)
 {
-	_type = copy._type;
+	if (this != &copy)
+	{
+		this->_type = copy._type;
+		delete _brain;
+		this->_brain = new Brain(*(copy._brain));
+	}
 	return (*this);
 }
 
@@ -45,4 +51,9 @@ std::string Cat::getType() const
 void Cat::makeSound() const
 {
 	std::cout << "Miaouuuu" << std::endl;
+}
+
+Brain* Dog::getBrain() const
+{
+	return (this->_brain);
 }

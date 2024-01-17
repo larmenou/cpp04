@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:02:00 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/16 14:20:39 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:41:43 by baloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 int main()
 {
 	{
+		std::cout << "First test:" << std::endl;
 		const Animal* j = new Dog();
 		const Animal* i = new Cat();
 
@@ -27,6 +28,25 @@ int main()
 	}
 	{
 		std::cout << std::endl;
+		std::cout << "Second test:" << std::endl;
+		Dog dog;
+		Dog copy(dog);
+
+		std::cout << std::endl;
+		
+		std::cout << dog.getType() << std::endl;
+		std::cout << copy.getType() << std::endl;
+
+		std::cout << dog.getBrain()->getIdea(5) << std::endl;
+		std::cout << copy.getBrain()->getIdea(5) << std::endl;
+		dog.getBrain()->setIdea(5, "Ecureuil !");
+		
+		std::cout << dog.getBrain()->getIdea(5) << std::endl;
+		std::cout << copy.getBrain()->getIdea(5) << std::endl;
+	}
+	{
+		std::cout << std::endl;
+		std::cout << "Third test" << std::endl;
 		
 		Animal* meta[10];
 		

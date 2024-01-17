@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:14:32 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/16 14:55:38 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/17 12:31:08 by baloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,8 @@ Dog::Dog()
 
 Dog::Dog(const Dog& copy)
 {
-	_type = copy._type;
+	this->_type = copy._type;
+	this->_brain = new Brain(*(copy._brain));
 	std::cout << "Copy Dog constructor called." << std::endl;
 }
 
@@ -29,12 +30,9 @@ Dog& Dog::operator=(const Dog& copy)
 {
 	if (this != &copy)
 	{
-		std::cout << "OK" << std::endl;
-		_type = copy._type;
+		this->_type = copy._type;
 		delete _brain;
-		_brain = new Brain();
-		for(int i = 0; i < 100; i++)
-			_brain->setIdea(i, copy._brain->getIdea(i));
+		this->_brain = new Brain(*(copy._brain));
 	}
 	return (*this);
 }
@@ -55,7 +53,7 @@ void Dog::makeSound() const
 	std::cout << "Wouf wouf" << std::endl;
 }
 
-Brain* Dog::getBrain()
+Brain* Dog::getBrain() const
 {
 	return (this->_brain);
 }

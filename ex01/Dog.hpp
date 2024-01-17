@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
+/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:14:35 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/16 14:55:48 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/17 11:18:50 by baloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Dog : public Animal
 		virtual std::string getType() const;
 		virtual void makeSound() const;
 		
-		Brain* getBrain();
+		Brain* getBrain() const;
 	
 	private:
 		Brain* _brain;
