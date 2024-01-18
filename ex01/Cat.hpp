@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:14:30 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/17 14:12:27 by baloo            ###   ########.fr       */
+/*   Updated: 2024/01/18 10:13:01 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CAT_HPP
 # define CAT_HPP
 
-# include "Animal.hpp"
+# include "AAnimal.hpp"
 # include "Brain.hpp"
 
 # include <string>

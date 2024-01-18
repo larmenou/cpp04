@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: baloo <baloo@student.42.fr>                +#+  +:+       +#+        */
+/*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 13:14:28 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/17 14:13:14 by baloo            ###   ########.fr       */
+/*   Updated: 2024/01/18 07:28:31 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void Cat::makeSound() const
 	std::cout << "Miaouuuu" << std::endl;
 }
 
-Brain* Dog::getBrain() const
+Brain* Cat::getBrain() const
 {
 	return (this->_brain);
 }
