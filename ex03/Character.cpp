@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 13:06:50 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/18 13:07:52 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/19 11:34:46 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,14 @@ Character::Character()
 	this->_name = "Character";
 }
 
-Character::Character(std::string const & type)
+Character::Character(std::string name)
 {
-	this->_type = type;
+	this->_name = name;
 }
 
 Character::Character(Character& copy)
 {
-	this->_type = copy._type;
+	this->_name = copy._name;
 }
 
 Character::~Character(){}
@@ -32,22 +32,25 @@ Character::~Character(){}
 Character& Character::operator=(Character& copy)
 {
 	if (this != &copy)
-		this->_type = copy._type;
+	{
+		this->_name = copy._name;
+	}
 	return (*this);
 }
 
-std::string const & Character::getType() const
+void Character::use(int idx, ICharacter& target)
 {
-	return (this->_type);
+	this->_inventory[idx]->use(target);	
 }
 
-Character* Character::clone() const
+void Character::equip(AMateria* m)
 {
-	Character *i = new Character();
-	return (i);
-}
-
-void Character::use(ICharacter& target)
-{
-	std::cout << "* shoots an Character bolt at " << target.getName() << " *"<< std::endl;
+	for(int i = 0; i < 4; i++)
+	{
+		if (this->_inventory[i] == NULL)
+		{
+			this->_inventory[i] = m;
+			break ;
+		}
+	}
 }
