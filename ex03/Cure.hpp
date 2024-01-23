@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:27:34 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/18 12:20:15 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:25:16 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Cure : public AMateria
 		Cure();
 		Cure(std::string const & type);
 		Cure(Cure& copy);
-		~Cure();
+		virtual ~Cure();
 		
 		Cure& operator=(Cure& copy);
 

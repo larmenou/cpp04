@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:51:25 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/18 12:06:32 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:44:37 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,7 @@ std::string const & Cure::getType() const
 
 Cure* Cure::clone() const
 {
-	Cure *c = new Cure();
-	return (c);
+	return (new Cure());
 }
 
 void Cure::use(ICharacter& target)

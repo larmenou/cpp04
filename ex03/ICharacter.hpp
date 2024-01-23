@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 10:30:34 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/18 10:31:43 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:55:25 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ class ICharacter
 		virtual void equip(AMateria* m) = 0;
 		virtual void unequip(int idx) = 0;
 		virtual void use(int idx, ICharacter& target) = 0;
+		virtual AMateria* getAMateria(int idx) = 0;
 };
 
 #endif

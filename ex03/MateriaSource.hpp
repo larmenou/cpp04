@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:31:03 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/19 11:33:07 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:26:46 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,16 @@
 class MateriaSource : public IMateriaSource
 {
 	public:
-		virtual ~MateriaSource() {}
+		MateriaSource();
+		MateriaSource(MateriaSource& copy);
+		MateriaSource& operator=(MateriaSource& copy);
+		virtual ~MateriaSource();
+		
 		virtual void learnMateria(AMateria*);
 		virtual AMateria* createMateria(std::string const & type);
+
+	private:
+		AMateria* _inventory[4];
 };
 
 #endif

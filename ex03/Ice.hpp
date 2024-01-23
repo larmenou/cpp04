@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:30:56 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/18 12:20:18 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/23 11:25:20 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ class Ice : public AMateria
 		Ice();
 		Ice(std::string const & type);
 		Ice(Ice& copy);
-		~Ice();
+		virtual ~Ice();
 		
 		Ice& operator=(Ice& copy);
 

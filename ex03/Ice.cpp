@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 12:20:36 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/18 12:22:24 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/23 13:12:34 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 Ice::Ice()
 {
-	this->_type = "Ice";
+	this->_type = "ice";
 }
 
 Ice::Ice(std::string const & type)
@@ -43,8 +43,7 @@ std::string const & Ice::getType() const
 
 Ice* Ice::clone() const
 {
-	Ice *i = new Ice();
-	return (i);
+	return (new Ice());
 }
 
 void Ice::use(ICharacter& target)
