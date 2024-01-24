@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 12:48:09 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/23 13:43:11 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:52:47 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include <iostream>
 
 # include "ICharacter.hpp"
-# include "AMateria.hpp"
 
 class Character : public ICharacter
 {

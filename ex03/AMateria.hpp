@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 10:28:28 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/23 11:25:09 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:17:34 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <string>
 # include <iostream>
+
+# include "ICharacter.hpp"
 
 class ICharacter;
 

@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:31:05 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/23 13:26:06 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/24 17:03:06 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,10 @@ MateriaSource::MateriaSource(MateriaSource& copy)
 {
 	for (int i = 0; i < 4; i++)
 	{
-		if (this->_inventory[i])
-			delete _inventory[i];
 		if (copy._inventory[i])
 			this->_inventory[i] = copy._inventory[i]->clone();
+		else
+			this->_inventory[i] = 0;
 	}
 }
 

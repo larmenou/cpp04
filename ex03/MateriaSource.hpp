@@ -6,14 +6,13 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 11:31:03 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/23 11:26:46 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:00:38 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef MATERIASOURCE_HPP
 # define MATERIASOURCE_HPP
 
-# include "AMateria.hpp"
 # include "IMateriaSource.hpp"
 
 class MateriaSource : public IMateriaSource

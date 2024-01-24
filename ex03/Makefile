@@ -1,5 +1,5 @@
 CPP			:= c++
-CFLAGS		:= -g -Wall -Wextra -Werror -std=c++98
+CPPFLAGS		:= -g -Wall -Wextra -Werror -std=c++98
 OBJFLAGS 	:= -c
 
 NAME		:= Materia
@@ -20,7 +20,7 @@ all: 		$(NAME)
 				$(CPP) $(CPPFLAGS) $(OBJFLAGS) $< -o $@
 
 $(NAME): 	$(OBJ)
-				$(CPP) $(CFLAGS) $(OBJ) -o $(NAME)
+				$(CPP) $(CPPFLAGS) $(OBJ) -o $(NAME)
 
 clean:
 				@rm -f $(OBJ)

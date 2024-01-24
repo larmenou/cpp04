@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 10:30:34 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/23 13:55:25 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:17:12 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <string>
 
 # include "AMateria.hpp"
+
+class AMateria;
 
 class ICharacter
 {

@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 10:46:20 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/18 11:22:59 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/24 12:27:10 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ std::string const & AMateria::getType() const
 
 void AMateria::use(ICharacter& target)
 {
-	
+	std::cout << "* " << target.getName() << ": " << this->_type << " Materia used *" << std::endl;
 }

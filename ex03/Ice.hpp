@@ -6,7 +6,7 @@
 /*   By: larmenou <larmenou@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 11:30:56 by larmenou          #+#    #+#             */
-/*   Updated: 2024/01/23 11:25:20 by larmenou         ###   ########.fr       */
+/*   Updated: 2024/01/24 13:03:04 by larmenou         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <string>
 # include <iostream>
 
-# include "ICharacter.hpp"
+# include "AMateria.hpp"
 
 class Ice : public AMateria
 {
